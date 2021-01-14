@@ -3,10 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Denisa Orlikova | Alert Cards</title>
     <link rel="stylesheet" href="src/css/styles.css">
 </head>
 <body>
-    <h1>Hello :)</h1>
+    <div class="alert alert--success">
+        <div class="alert__icon alert__icon--success">
+            <i class="bi bi-check2"></i>
+        </div>
+        <div class="alert__msg">
+            <p>
+                <span>Požadavek byl potvrzen.</span>
+            </p>
+        </div>
+        </div>
+    <div class="alert alert--info">
+        <div class="alert__icon alert__icon--info">
+            <p>2:56</p>
+        </div>
+        <div class="alert__msg">
+            <p>
+                <span>Potvrzení požadavku.</span>
+            </p>
+            <p>
+                <a href="#">Odeslat SMS</a> s potvrzovacím kódem.
+            </p>
+        </div>
+    </div>
+    <div class="alert alert--error">
+        <div class="alert__icon alert__icon--error">
+            <i class="bi bi-x"></i>
+        </div>
+        <div class="alert__msg">
+            <p>
+                <span>Požadavek nebyl potvrzen. </span> 
+            </p>
+            <p>
+                <i class="bi bi-arrow-repeat"></i>
+                <a href="#">Zkusit znovu</a>
+            </p>
+        </div>
+    </div>
 </body>
 </html>

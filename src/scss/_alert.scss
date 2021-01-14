@@ -1,0 +1,195 @@
+/* -----------------------------------
+    Alert Card General Styles
+--------------------------------------*/
+
+.alert {
+   height: auto;
+   width: 560px;
+   border-left: 3px solid;
+   border-radius: 3px;
+   box-shadow: $box-shadow;
+   padding: 24px 96px 24px 48px;
+   display: flex;
+   align-items: center;
+   margin: 8px 0;
+   flex-shrink: 0;
+}
+
+.alert__icon {
+    color: $white;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    flex-shrink: 0;
+    font-size: 24px;
+    font-weight: bold;
+
+    i {
+        flex-shrink: 0;
+        font-size: 32px;
+    }
+
+    @include flex(center, center, column)
+}
+
+.alert__msg {
+    margin-left: 40px;
+    font-size: 14px;
+
+    span {
+        font-weight: 500;
+        font-size: 16px;
+    }
+
+    i {
+        color: $link-color;
+    }
+}
+
+/* -----------------------------------
+     Alert Individual Styles
+--------------------------------------*/
+
+// Icons
+
+.alert__icon--success {
+    background-color: $success-color;
+
+    i {
+        position: relative;
+        bottom: 2px;
+        left: 0;
+    }
+}
+
+.alert__icon--error {
+    background-color: $error-color;
+
+    i {
+        position: relative;
+        bottom: 2px;
+        left: 0;
+    }
+    
+}
+
+.alert__icon--info {
+    background-color: #fff;
+    position: absolute;
+
+    &::before {
+        content: "";
+        width: 80px;
+        height: 80px;
+        background-color: $info-bg;
+        position: absolute;
+        z-index: -2;
+        border-radius: 50%;
+    }
+    
+    &::after {
+        content: "";
+        width: 60px;
+        height: 60px;
+        background-color: $info-bg;
+        position: absolute;
+        z-index: -1;
+        border-radius: 50%;
+    }
+
+    p {
+        z-index: 4;
+        color: $body-color;
+        font-weight: 300;
+        font-size: 12px;
+    }
+}
+
+// Background, typography, dimensions
+
+.alert--success {
+    background-color: $success-bg;
+    color: $success-color;
+}
+
+.alert--error {
+    background-color: $error-bg;
+    color: $error-color;
+
+    .alert__msg {
+
+        p {
+
+            span {
+                margin-right: 24px;
+            }
+
+            a {
+                margin-left: 0.25em;
+            }
+        }
+
+        flex-wrap: wrap;
+        @include flex (center, center, row)
+    }
+}
+
+.alert--info {
+    background-color: $info-bg;
+    color: $info-color;
+    box-shadow: $box-shadow;
+
+    .alert__msg {
+        padding: 20px;
+        margin-left: 60px;
+
+        p:first-of-type {
+            margin-bottom: 6px;
+        }
+    }
+}
+
+/* -----------------------------------
+     Mobile Styles
+--------------------------------------*/
+
+@media screen and (max-width: $screen-md) {
+
+    .alert {
+        height: auto;
+        width: 80%;
+        padding: 24px;
+     }
+}
+
+
+@media screen and (max-width: $screen-sm) {
+
+    .alert--error {
+        flex-shrink: 0;
+    
+        .alert__msg {    
+            @include flex(start, center, row)
+
+            p:first-of-type {
+                margin-bottom: 6px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $screen-xs) {
+
+    .alert {
+        width: 75%;
+        padding: 24px;
+     }
+
+    .alert--info {
+
+        .alert__msg {
+            padding: 20px 0;
+            margin-left: 80px;
+        }
+    }
+}

@@ -1,65 +1,20 @@
-/* -----------------
-       Imports
-------------------- */
-
-// Fonts
-
-@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap');
-
-// Styles
+// Reset
 
 @import 'reset';
 
-/* ------------------
-        Variables
---------------------*/
+// Fonts & Icons
 
-// Colors
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
 
-$white: #fff;
-$black: #000;
+// Variables (Colors, Breakpoints, Mixins)
 
-$primary: #19A1AE;
+@import 'variables';
+@import 'mixins';
 
-$text-dark: #2E3349;
-$text-light: #6B7082;
+// Base Styles
 
-$grey-light: rgba(0, 0, 0, 0.25);
-$grey-medium: #E8E9EC;
+@import 'base';
 
-// Whitespace
+// Alert Cards
 
-$spacer: 1rem;
-
-/* --------------------
-        Mixins
-----------------------*/
-
-
-@mixin flex($justify, $align, $direction) {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: $justify;
-    -ms-flex-pack: $justify;
-    justify-content: $justify;
-    -webkit-box-align: $align;
-    -ms-flex-align: $align;
-    align-items: $align;
-    -webkit-box-direction: $direction;
-    -ms-flex-direction: $direction;
-    flex-direction: $direction;
-}
-
-@mixin box-shadow {
-    -webkit-box-shadow: 0 4px 4px 0 $grey-light;
-    box-shadow: 0 4px 4px 0 $grey-light;
-}
-
-@mixin border($my-color) {
-    border: 1px solid $my-color;
-}
-
-/* -----------------------
-        Base Styles
-------------------------*/
+@import 'alert';
