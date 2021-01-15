@@ -1,0 +1,18 @@
+// Mixins
+
+@mixin flex($justify, $align, $direction) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+  }
+  
+@mixin box-shadow {
+-webkit-box-shadow: 0 4px 4px 0 $grey-200;
+box-shadow: 0 4px 4px 0 $grey-200;
+}
+
+@mixin border($my-color) {
+border: 1px solid $my-color;
+}
+  

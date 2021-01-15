@@ -1,0 +1,29 @@
+//Colors
+
+$white: #fff;
+$black: #000;
+
+$grey-200:  rgba(0, 0, 0, 0.2);
+
+$body-color: #272727;
+
+$link-color: rgba(43, 31, 105, 1);
+
+$success-bg: rgba(24, 174, 65, 0.1);
+$success-color: rgba(24, 174, 65, 1);
+
+$error-bg:  rgba(245, 24, 20, 0.1);
+$error-color: rgba(245, 24, 20, 1);
+
+$info-bg: rgba(43, 31, 105, 0.1);
+$info-color: rgba(43, 31, 105, 1);
+
+$box-shadow: 1px 1px 1px #dddddd;
+
+// Breakpoints
+
+$screen-xs: 375px;
+$screen-sm: 576px;
+$screen-md: 768px;
+$screen-lg: 992px;
+$screen-xl: 1200px;
